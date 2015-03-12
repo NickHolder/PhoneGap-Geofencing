@@ -12,7 +12,6 @@
     <js-module src="www/DGGeofencing.js" name="DGGeofencing">
         <clobbers target="DGGeofencing" />
     </js-module>
-    <dependency id="com.google.playservices" url="https://github.com/NickHolder/google-play-services.git" commit="master"/>
     <platform name="ios">
 		<config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
 			<string>${EXECUTABLE_NAME} Would Like to Use Your Current Location Even In Background.</string>
@@ -30,7 +29,7 @@
     </platform>
 
 	<platform name="android">
-
+ <dependency id="com.google.playservices" url="https://github.com/MobileChromeApps/google-play-services" commit="00f511a8ce332d4586f067240460bfe978ace2ae" />
         <source-file src="src/android/src/com/phonegap/geofencing/DGGeofencing.java" target-dir="src/com/phonegap/geofencing" />
         <source-file src="src/android/src/com/phonegap/geofencing/LocationChangedListener.java" target-dir="src/com/phonegap/geofencing" />
         <source-file src="src/android/src/com/phonegap/geofencing/ProximityReceiver.java" target-dir="src/com/phonegap/geofencing" />
