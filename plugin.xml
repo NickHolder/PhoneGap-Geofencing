@@ -12,7 +12,7 @@
     <js-module src="www/DGGeofencing.js" name="DGGeofencing">
         <clobbers target="DGGeofencing" />
     </js-module>
-    <dependency id="com.google.playservices" url="https://github.com/NickHolder/google-play-services.git" />
+    <dependency id="com.google.playservices" url="https://github.com/NickHolder/google-play-services.git" commit="master"/>
     <platform name="ios">
 		<config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
 			<string>${EXECUTABLE_NAME} Would Like to Use Your Current Location Even In Background.</string>
