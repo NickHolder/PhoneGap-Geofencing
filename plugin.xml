@@ -31,8 +31,8 @@
 	<platform name="android">
 
         <dependency id="com.google.playservices" />
-        
-        <lib-file src="src/android/libs/google-play-services.jar" />
+
+        <lib-file src="src/android/lib/google-play-services.jar" />
 
         <source-file src="src/android/src/com/phonegap/geofencing/DGGeofencing.java" target-dir="src/com/phonegap/geofencing" />
         <source-file src="src/android/src/com/phonegap/geofencing/LocationChangedListener.java" target-dir="src/com/phonegap/geofencing" />
