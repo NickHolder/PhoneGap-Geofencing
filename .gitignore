@@ -18,3 +18,5 @@ profile
 *bin*
 *gen*
 local.properties
+
+.idea

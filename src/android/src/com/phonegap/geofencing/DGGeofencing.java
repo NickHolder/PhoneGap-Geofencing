@@ -49,6 +49,7 @@ public class DGGeofencing extends CordovaPlugin implements LocationListener
 	  
 	private CallbackContext geofencingCallbacks;
 	private CallbackContext currentCallbacks;
+	private boolean madeListener;
 	
 	enum DGLocationStatus
 	{
@@ -154,7 +155,11 @@ public class DGGeofencing extends CordovaPlugin implements LocationListener
 		        if(checkGeofencingAvailable())
 		        {
 		        	this.startMonitoringRegion(regionId, latitude, longitude, radius);
-					registerListener();
+		        	if( !madeListener )
+		        	{
+		        		registerListener();
+		        		madeListener = true;
+		        	};
 		        	
 					JSONObject returnInfo = new JSONObject();				
 					returnInfo.put("timestamp", System.currentTimeMillis());
